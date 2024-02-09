@@ -14,12 +14,14 @@ export const Users = () => {
     },[]);
 
   return (
-    <div>
+    <div className='text-center'>
         <h2 className='text-3xl underline'>Users</h2>
-        <div>
+        <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-auto max-w-screen-lg'>
             {
                 users.map(user =>(
-                    <p>{user.name}</p>
+                    <div key={user.id} className='rounded-md p-4 shadow-md'>
+                        <p>{user.name}</p>
+                    </div>
                 ))
             }
         </div>
